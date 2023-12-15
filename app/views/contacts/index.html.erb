@@ -1,0 +1,17 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Contacts</h1>
+
+<div id="contacts">
+  <% @contacts.each do |contact| %>
+    <%= render contact %>
+    <p>
+      <%= link_to "Show this contact", contact %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New contact", new_contact_path %>
